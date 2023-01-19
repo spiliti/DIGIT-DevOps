@@ -1,4 +1,4 @@
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: {{  template "name" . }}-leaderelection
@@ -10,7 +10,7 @@ rules:
     resources: ["configmaps"]
     verbs: ["get", "create", "update", "patch"]
 ---
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: {{  template "name" . }}-controller-issuers
@@ -31,7 +31,7 @@ rules:
     verbs: ["create", "patch"]
 ---
 # ClusterIssuer controller role
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: {{  template "name" . }}-controller-clusterissuers
@@ -51,7 +51,7 @@ rules:
     resources: ["events"]
     verbs: ["create", "patch"]    
 ---
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: {{  template "name" . }}-controller-certificates
@@ -80,7 +80,7 @@ rules:
     resources: ["events"]
     verbs: ["create", "patch"]
 ---
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: {{  template "name" . }}-controller-orders
@@ -109,7 +109,7 @@ rules:
     resources: ["events"]
     verbs: ["create", "patch"]
 ---
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: {{  template "name" . }}-controller-challenges
@@ -150,7 +150,7 @@ rules:
     resources: ["secrets"]
     verbs: ["get", "list", "watch"]
 ---
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: {{  template "name" . }}-controller-ingress-shim

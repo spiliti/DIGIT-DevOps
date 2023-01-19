@@ -193,7 +193,7 @@ The following tables list the configurable parameters of the Jenkins chart and t
 | `master.extraPorts`               | Open extra ports, for other uses     | `[]`                                      |
 | `master.overwriteConfig`          | Replace init scripts and config w/ ConfigMap on boot  | `false`                  |
 | `master.ingress.enabled`          | Enables ingress                      | `false`                                   |
-| `master.ingress.apiVersion`       | Ingress API version                  | `extensions/v1beta1`                      |
+| `master.ingress.apiVersion`       | Ingress API version                  | `networking.k8s.io/v1`                      |
 | `master.ingress.hostName`         | Ingress host name                    | Not set                                   |
 | `master.ingress.annotations`      | Ingress annotations                  | `{}`                                      |
 | `master.ingress.labels`           | Ingress labels                       | `{}`                                      |
@@ -201,7 +201,7 @@ The following tables list the configurable parameters of the Jenkins chart and t
 | `master.ingress.paths`            | Override for the default Ingress paths  | `[]`                                   |
 | `master.ingress.tls`              | Ingress TLS configuration            | `[]`                                      |
 | `master.backendconfig.enabled`     | Enables backendconfig     | `false`              |
-| `master.backendconfig.apiVersion`  | backendconfig API version | `extensions/v1beta1` |
+| `master.backendconfig.apiVersion`  | backendconfig API version | `networking.k8s.io/v1` |
 | `master.backendconfig.name`        | backendconfig name        | Not set              |
 | `master.backendconfig.annotations` | backendconfig annotations | `{}`                 |
 | `master.backendconfig.labels`      | backendconfig labels      | `{}`                 |
